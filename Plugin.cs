@@ -58,6 +58,7 @@ namespace learning_gtag_modcreation
 		{
 			/* Activate your mod here */
 			/* This code will run regardless of if the mod is enabled*/
+			print("Hi");
 
 			inRoom = true;
 		}
@@ -70,6 +71,11 @@ namespace learning_gtag_modcreation
 			/* This code will run regardless of if the mod is enabled*/
 
 			inRoom = false;
+		}
+
+		private void OnGUI()
+		{
+			UnityEngine.GUI.Label(new Rect(20f, 1050, 2255, 65), string.Concat("boogiehasfun"));
 		}
 	}
 }
