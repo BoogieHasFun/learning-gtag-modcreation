@@ -1,12 +1,6 @@
-#
-# This gist is obsolete!
-# Please use https://github.com/Gorilla-Tag-Modding-Group/gorilla-tag-build-tools instead
-#
-
 # https://gist.github.com/Graicc/8ca16f70e9603e9975d99c4a607ff77a
 name: Auto Build
-on: push
-  workflow_dispatch:
+on: 
   push:
     branches: [master,main]
     paths-ignore:
