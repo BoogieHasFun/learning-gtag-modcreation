@@ -55,7 +55,7 @@ jobs:
     - name: Prepare build for upload
       run: |
         $dir = (ls . -filter *.csproj -recurse).BaseName
-        mv $dir\$dir-v.zip Build.zip
+        mv $dir\$dir-.zip Build.zip
         Expand-Archive Build.zip Build
     # Upload the mod
     - name: Upload to GitHub
