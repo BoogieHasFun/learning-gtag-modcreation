@@ -1,16 +1,7 @@
 # https://gist.github.com/Graicc/8ca16f70e9603e9975d99c4a607ff77a
 name: Auto Build
 on: 
-  push:
-    branches: [master,main]
-    paths-ignore:
-      - '**.yml'
-      - '!.github/workflows/auto-build.yml'
-      - '**.md'
-      - '.gitignore'
-  pull_request:
-    branches: [master,main]
-
+  workflow_dispatch:
 
 jobs:
   build:
