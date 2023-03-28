@@ -75,14 +75,4 @@ jobs:
       with:
         name: Build
         path: Build
-    - name: Upload to Discord
-      env:
-        WEBHOOK_URL: ${{ secrets.WEBHOOK_URL }}
-      if: "${{ env.WEBHOOK_URL != '' }}" # If a webhook is supplied, use it instead
-      shell: bash
-      run: |
-        curl https://raw.githubusercontent.com/ChaoticWeg/discord.sh/master/discord.sh -o discord.sh
-        ./discord.sh \
-        --webhook-url="${{ secrets.WEBHOOK_URL }}" \
-        --text '**${{github.actor}}** on **${{github.repository}}**(${{github.ref}}): *${{ github.event.head_commit.message }}*\n<https://github.com/${{github.repository}}/commit/${{github.sha}}>' \
-        --file Build.zip
+    
